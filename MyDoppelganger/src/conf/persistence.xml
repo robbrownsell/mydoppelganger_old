@@ -13,7 +13,6 @@
                 'import.sql' (in the root of the classpath) being used to populate
                 the DB
             -->
-      <property name="hibernate.hbm2ddl.auto" value="update"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
     </properties>

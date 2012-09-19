@@ -24,10 +24,10 @@ public class ProfileDAO implements ProfileDAOInterface {
     private EntityManager em;
 
     @Transactional
-  
     @Override
     public void persist(Profile profile) {
         em.persist(profile);
+        
     }
     
     @Transactional

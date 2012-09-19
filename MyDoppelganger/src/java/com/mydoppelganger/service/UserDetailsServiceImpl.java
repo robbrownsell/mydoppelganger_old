@@ -39,6 +39,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             List<GrantedAuthority> authorisation = new ArrayList<GrantedAuthority>();
             authorisation.add(new GrantedAuthorityImpl("ROLE_USER"));
             user = new User(username, password, true, true, true, true, authorisation);
+        } else {
+            throw new UsernameNotFoundException("user not found");
+
         }
 
         return user;

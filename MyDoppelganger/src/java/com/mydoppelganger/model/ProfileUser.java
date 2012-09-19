@@ -46,6 +46,8 @@ public class ProfileUser implements Serializable {
     @Size(min=6)
     @Column(name = "USERNAME")
     private String username;
+    @NotNull
+    @Size(min=6)
     @Column(name = "PASSWORD")
     private String password;
     @JoinColumn(name = "PROFILE_ID", referencedColumnName = "ID", insertable = false, updatable = false)
