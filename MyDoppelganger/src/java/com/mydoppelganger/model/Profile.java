@@ -49,9 +49,11 @@ public class Profile implements Serializable {
     @Column(name = "ID")
     private Long id;
     @NotNull
-    @Size(min=1)
+    @Size(min=2, max=30)
     @Column(name = "FORENAME")
     private String forename;
+    @NotNull
+    @Size(min=2, max=50)
     @Column(name = "SURNAME")
     private String surname;
     @Column(name = "DOB")
