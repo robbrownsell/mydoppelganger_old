@@ -21,6 +21,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -60,6 +61,7 @@ public class Profile implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dob;
     @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "profile")
+    @Valid
     private ProfileUser profileUser;
 
     public Profile() {

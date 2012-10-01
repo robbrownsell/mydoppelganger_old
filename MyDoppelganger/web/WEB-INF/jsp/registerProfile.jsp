@@ -34,7 +34,9 @@
                             <spring:bind path="forename">
                                 <input type="text" name="${status.expression}" value="${status.value}">
                             </spring:bind>
-                            <form:errors path="forename"/>
+                            <form:errors path="forename" >
+                                forename must be between 2 and 30 characters in length
+                            </form:errors>
                         </td>
                     </tr>
                     <tr><td>
@@ -44,6 +46,9 @@
                             <spring:bind path="surname">
                                 <input type="text" name="${status.expression}" value="${status.value}">
                             </spring:bind>
+                            <form:errors path="surname">
+                                surname must be between 2 and 50 characters in length
+                            </form:errors>
                         </td>
                     </tr>
                     <tr><td>
@@ -53,7 +58,9 @@
                             <spring:bind path="profileUser.username">
                                 <input type="text" name="${status.expression}" value="${status.value}">
                             </spring:bind>
-                            <form:errors path="profileUser.username"/>
+                            <form:errors path="profileUser.username">
+                                must be at least 6 characters
+                            </form:errors>
                         </td>
                     </tr>
                     <tr><td>
@@ -63,6 +70,9 @@
                             <spring:bind path="profileUser.password">
                                 <input type="password" name="${status.expression}" value="${status.value}">
                             </spring:bind>
+                            <form:errors path="profileUser.password">
+                                must be at least 6 characters
+                            </form:errors>
                         </td>
                     </tr>
                     <tr><td>
@@ -72,6 +82,9 @@
                             <spring:bind path="dob">
                                 <input id="dob" type="text" name="${status.expression}" value="${status.value}">
                             </spring:bind>
+                            <form:errors path="dob">
+                            DOB must be of format dd/mm/yyyy    
+                            </form:errors>
                         </td>
                     </tr>
                     <tr>

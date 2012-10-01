@@ -22,7 +22,8 @@
            
     <import resource="spring-security.xml"/>
     <import resource="jpa-config.xml"/>  
-    <context:component-scan base-package="com.mydoppelganger"/>
+    <context:component-scan base-package="com.mydoppelganger.dao"/>
+    <context:component-scan base-package="com.mydoppelganger.service"/>
     <tx:annotation-driven transaction-manager="transactionManager" />
 
     <bean name="userDetailsService" class="com.mydoppelganger.service.UserDetailsServiceImpl" />

@@ -22,12 +22,12 @@ public class ProfileDAO implements ProfileDAOInterface {
     
     @PersistenceContext(unitName = "MyDoppPU")
     private EntityManager em;
+    
 
     @Transactional
     @Override
     public void persist(Profile profile) {
-        em.persist(profile);
-        
+        em.persist(profile);       
     }
     
     @Transactional
